@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3e5d8;
+  /* Styles for screens smaller than 600 pixels */
+  /* Styles for screens between 601 pixels and 900 pixels */
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: white;
+  }
+}
+p {
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main {
+  width: 48%;
+  background-color: white;
+  padding: 5vh;
+  border-radius: 20px;
+  margin: 15vh 0;
+  /* Styles for screens smaller than 600 pixels */
+  /* Styles for screens between 601 pixels and 900 pixels */
+}
+.main .dish_img {
+  height: 40vh;
+  width: 100%;
+  border-radius: 15px;
+}
+.main h1 {
+  font-size: 2.5em;
+  padding: 1.3em 0;
+  color: rgba(0, 0, 0, 0.85);
+}
+.main .description {
+  color: rgba(0, 0, 0, 0.85);
+}
+.main .time {
+  background-color: rgba(243, 229, 216, 0.8352941176);
+  color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  margin: 20px 10px 20px 0;
+}
+.main .time h3 {
+  color: rgba(139, 0, 77, 0.932);
+}
+.main .time ul {
+  padding-left: 20px;
+}
+.main .time li {
+  padding-top: 10px;
+}
+.main .box {
+  margin-top: 2.5em;
+  margin-bottom: 1.5em;
+  color: rgba(0, 0, 0, 0.85);
+}
+.main .box__head {
+  color: rgba(214, 22, 22, 0.911);
+  font-size: 1.8em;
+  padding-bottom: 5px;
+}
+.main .box ul {
+  padding-left: 20px;
+}
+.main .box ul li {
+  padding-top: 10px;
+  list-style-type: disc;
+}
+.main .box ol {
+  padding-left: 20px;
+}
+.main .box ol li {
+  padding-top: 12px;
+}
+.main .box__desc {
+  padding: 12px 0;
+}
+.main .box table {
+  width: 100%;
+  border-collapse: collapse;
+  color: rgba(0, 0, 0, 0.85);
+}
+.main .box table th,
+.main .box table td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #ddd;
+}
+@media only screen and (max-width: 600px) {
+  .main {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+  .main .dish_img {
+    height: 40vh;
+    width: 100%;
+  }
+  .main .part_2 {
+    padding: 0 3vh 1vh 3vh;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .main {
+    width: 60%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

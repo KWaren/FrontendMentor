@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$black: rgba(0, 0, 0, 0.85);
+$header: rgba(214, 22, 22, 0.911);
+$bg_lite: #f3e5d8d5;
+
+body {
+    background-color: #f3e5d8;
+
+    /* Styles for screens smaller than 600 pixels */
+    @media only screen and (max-width: 600px) {
+        background-color: white;
+
+    }
+
+    /* Styles for screens between 601 pixels and 900 pixels */
+    @media only screen and (min-width: 601px) and (max-width: 900px) {}
+}
+
+p {
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main {
+    width: 48%;
+    background-color: white;
+    padding: 5vh;
+    border-radius: 20px;
+    margin: 15vh 0;
+
+    .dish_img {
+        // text-align: center;
+        // padding: ;
+        height: 40vh;
+        width: 100%;
+        border-radius: 15px;
+        // margin-bottom: 1.5em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        padding: 1.3em 0;
+        color: $black;
+    }
+
+    .description {
+        color: $black;
+        // justify-self: center;
+    }
+
+    .time {
+        background-color: $bg_lite;
+        color: $black;
+        padding: 20px;
+        margin: 20px 10px 20px 0;
+
+        h3 {
+            color: rgba(139, 0, 77, 0.932);
+        }
+
+        ul {
+
+            padding-left: 20px;
+        }
+
+        li {
+            padding-top: 10px;
+        }
+    }
+
+    .box {
+        margin-top: 2.5em;
+        margin-bottom: 1.5em;
+        color: $black;
+
+        &__head {
+            color: $header;
+            font-size: 1.8em;
+            padding-bottom: 5px;
+        }
+
+        ul {
+
+            padding-left: 20px;
+
+            li {
+                padding-top: 10px;
+                list-style-type: disc;
+            }
+        }
+
+        ol {
+
+            padding-left: 20px;
+
+            li {
+                padding-top: 12px;
+            }
+        }
+
+        &__desc {
+            padding: 12px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: $black;
+
+            th,
+            td {
+                padding: 8px 15px;
+                // text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+
+    /* Styles for screens smaller than 600 pixels */
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+        .dish_img {
+            height: 40vh;
+            width: 100%;
+        } 
+        .part_2{
+            padding: 0 3vh 1vh 3vh ;
+
+        }  
+        
+    }
+
+    /* Styles for screens between 601 pixels and 900 pixels */
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+        width: 60%;
+        margin: 0;
+        border-radius: 0;
+
+    }
+}
