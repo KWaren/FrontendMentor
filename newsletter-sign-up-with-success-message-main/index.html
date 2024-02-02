@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="img-top" id="imgTop">
+    <img src="assets/images/illustration-sign-up-mobile.svg" alt="">
+  </div>
+  <!-- Sign-up form start -->
+  <section class="card" id="first">
+
+    <div class="card__content">
+      <h1 class="card__title">Stay updated!</h1>
+      <p class="card__presentation">Join 60,000+ product managers receiving monthly updates on:</p>
+      <p class="card__advantage"> <img src="assets/images/icon-list.svg" alt="List">Product discovery and building what
+        matters</p>
+      <p class="card__advantage"><img src="assets/images/icon-list.svg" alt="List"> Measuring to ensure updates are a
+        success</p>
+      <p class="card__advantage"><img src="assets/images/icon-list.svg" alt="List"> And much more!</p>
+      <div class="form">
+        <span class="line">
+          <label for=""> Email address</label>
+          <p class="mail-error" id="mail-error" style="color: red;"></p>
+        </span>
+        <br>
+        <input type="email" name="" id="email" class="email" placeholder="email@company.com" onchange="verifierMail()"
+          required><br>
+        <button class="btn btn-disabled" onclick="valider()" id="valider" title="Entrez un mail valid"
+          disabled>Subscribe to monthly newsletter</button>
+      </div>
+    </div>
+    <div class="card__img">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+  <div class="card1 success__card" id="second">
+    <span class="part-1">
+      <div>
+        <img src="assets/images/icon-success.svg" alt="">
+      </div>
+      <h2 class="card1__title">Thanks for subscribing!</h2>
+
+      <p>A confirmation email has been sent to ash@loremcompany.com.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+    </span>
+    <span class="part-2">
+      <button class="btn">Dismiss message</button>
+    </span>
+
+
+  </div>
+
+
+  <!-- Success message end -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
+<script>
+  function verifierMail() {
+    let email = document.getElementById("email");
+    let valider = document.getElementById("valider");
+    let mailError = document.getElementById("mail-error");
+
+    // Expression régulière pour la validation de l'e-mail
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email.value.trim() === "") {
+      mailError.textContent = "Ce champ est requis";
+      email.classList.add("error");
+
+    } else if (!emailRegex.test(email.value.trim())) {
+      mailError.textContent = "Format d'e-mail invalide";
+
+      email.classList.add("error");
+    } else {
+      mailError.textContent = "";
+      // mailValid.textContent = "Champ rempli";
+      email.classList.remove("error");
+      email.classList.add("valid");
+      valider.disabled = false;
+      valider.classList.remove("btn-disabled");
+      valider.title = 'Cliquez';
+
+    }
+  }
+  function valider() {
+    console.log('Etrange');
+    let email = document.getElementById("email");
+    let valider = document.getElementById("valider");
+    let firstCard = document.getElementById("first");
+    let secondCard = document.getElementById("second");
+    let imgTop = document.getElementById("imgTop");
+    firstCard.classList.add("success__card");
+    secondCard.classList.remove("success__card");
+    imgTop.classList.add("success__card");
+
+  }
+</script>

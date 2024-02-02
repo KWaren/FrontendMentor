@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  border: 1px solid red !important;
+  color: red;
+}
+
+.valid {
+  border: 2px solid rgb(1, 236, 1) !important;
+}
+
+p {
+  font-size: 16px;
+}
+
+.btn {
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: hsl(235, 18%, 26%);
+  outline: none;
+  border: none;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+.btn:hover {
+  background: linear-gradient(to right, hsl(4, 100%, 67%), #ff6600);
+  cursor: pointer;
+}
+
+.img-top {
+  display: none;
+}
+.img-top img {
+  height: 40vh;
+  border: 0 0 15px 15px;
+}
+@media only screen and (max-width: 500px) {
+  .img-top {
+    display: block;
+    height: 40vh;
+  }
+  .img-top img {
+    padding: 0;
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+.btn-disabled:hover {
+  background: linear-gradient(to right, hsl(4, 100%, 67%), #ff6600);
+  opacity: 0.8;
+  cursor: default;
+}
+
+input[type=email] {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.595);
+}
+input[type=email]:focus {
+  border: 1px solid rgba(0, 128, 0, 0.801);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 20px 0 rgba(75, 216, 19, 0.603);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(234, 29%, 20%);
+}
+@media only screen and (max-width: 500px) {
+  body {
+    display: block;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+}
+.card__content {
+  width: 55%;
+  padding: 0 40px 0 20px;
+}
+.card__title {
+  text-align: center;
+  padding: 10px 0;
+  color: hsl(235, 18%, 26%);
+  font-size: 40px;
+}
+.card__presentation {
+  padding: 10px 0;
+}
+.card__advantage {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.card__advantage img {
+  padding-right: 15px;
+}
+.card .form {
+  padding-top: 1.5em;
+}
+.card .form .line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -10px;
+  padding-bottom: 0;
+}
+.card .form label {
+  font-weight: bold;
+}
+.card__img {
+  width: 45%;
+}
+.card__img img {
+  height: 25em;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+  }
+  .card__img {
+    display: none;
+  }
+  .card__content {
+    width: 100%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (max-width: 500px) {
+  .attribution {
+    color: black;
+    display: none;
+  }
+}
+
+.card1 {
+  background-color: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 18px;
+  width: 45%;
+}
+.card1__title {
+  padding: 10px 0;
+  color: hsl(235, 18%, 26%);
+  font-size: 40px;
+}
+.card1 p {
+  padding: 20px 0 25px 0;
+}
+@media only screen and (max-width: 500px) {
+  .card1 {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+  }
+}
+
+.success__card {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

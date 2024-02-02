@@ -1,0 +1,231 @@
+$bg_body: hsl(234, 29%, 20%);
+$card_element: hsl(235, 18%, 26%);
+$primary: hsl(75, 94%, 57%);
+$btn_color: hsl(0, 0%, 20%);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.error{
+    border: 1px solid red !important;
+    color: red;
+  }
+  .valid{
+    border: 2px solid rgb(1, 236, 1) !important;
+  }
+p {
+    font-size: 16px;
+}
+.btn{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $card_element;
+    outline: none;
+    border: none;
+    color: white;
+    transition: all 0.4s ease-in-out;
+    &:hover{
+        background: linear-gradient(to right, hsl(4, 100%, 67%), #ff6600);
+        cursor: pointer;
+    }
+}
+.img-top{
+    display: none;
+    img{
+        height: 40vh;
+        border: 0 0 15px 15px;
+    }
+    @media only screen and (max-width: 500px) {
+        &{
+            display: block;
+            height: 40vh;
+            img{
+                padding: 0;
+                // margin-top: -100px;
+                width: 100%;
+                height: 40vh;
+            }
+        }
+        
+      }
+}
+.btn-disabled{
+    &:hover{
+        background: linear-gradient(to right, hsl(4, 100%, 67%), #ff6600);
+        opacity: 0.8;
+    // box-shadow: 0 0 0 0.25rem rgba(204, 231, 48, 0.712);
+    cursor: default;
+    }
+    
+}
+
+input[type=email] {
+    padding: 10px;
+    // margin: 2px 0;
+    margin-bottom: 10px;
+    width: 90%;
+    border-radius: 10px;
+    outline: none;
+    // border: none;
+    border: 1px solid rgba(0, 0, 0, 0.595);
+    &:focus{
+        border:1px solid rgba(0, 128, 0, 0.801);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0563, 0.2), 0 6px 20px 0 rgba(75, 216, 19, 0.603);
+    }
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg_body;
+    @media only screen and (max-width: 500px) {
+      display: block; 
+      background-color: white;
+      padding: 0;
+      margin: 0;
+      
+    }
+}
+
+.card {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 18px;
+    display: flex;
+    // flex-wrap: wrap;
+    
+    align-items: center;
+    
+    &__content {
+        width: 55%;
+        padding: 0 40px 0 20px;
+    }
+
+    &__title {
+        text-align: center;
+        padding: 10px 0;
+        color: $card_element;
+        font-size: 40px;
+    }
+
+    &__presentation {
+        padding: 10px 0;
+    }
+
+    &__advantage {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+
+        img {
+            padding-right: 15px;
+        }
+    }
+
+    .form {
+        padding-top: 1.5em;
+
+        .line{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: -10px;
+            padding-bottom: 0;
+        }
+        label {
+            font-weight: bold;
+        }
+    }
+
+    &__img {
+        width: 45%;
+
+        img {
+            height: 25em;
+            width: 100%;
+        }
+
+    }
+    
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: normal;
+        justify-content: center;
+        // align-items: center;
+        // margin-bottom: 15px;
+        // display: block;
+        text-align: center;
+        // position: relative;
+        background-color: white;
+        margin: 0;
+        &__img {
+            display: none;
+            
+        }
+        &__content{
+            width: 100%;
+        }
+        
+    }
+    
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media only screen and (max-width: 500px) {
+       color: black;
+       display: none;
+        
+      }
+
+  }
+
+  
+.card1{
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 18px;
+    width: 45%;
+    &__title {
+        padding: 10px 0;
+        color: $card_element;
+        font-size: 40px;
+    }
+    p{
+        padding: 20px 0 25px 0;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        
+    }
+}
+.success__card {
+    display: none;
+}
