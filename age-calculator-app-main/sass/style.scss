@@ -1,0 +1,113 @@
+$bg_body: hsl(0, 0%, 86%);
+$formText: hsl(0, 1%, 44%);
+$charte:hsl(259, 100%, 65%);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: $bg_body;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 50%;
+    background-color: white;
+    border-radius: 10px 10px 130px 10px;
+    padding: 35px;
+    .form{
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+
+        &__control{
+            width: 20%;
+            margin: 2vh;
+            color: $formText;
+        }
+        label{
+            text-transform: uppercase;
+            font-size: 14px;
+            // padding-bottom: 10px;
+        }
+        &__input{
+            width: 100%;
+            padding: 15px 0px 15px 8px;
+            font-size: 20px;
+            border-radius: 08px;
+            // outline: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.507);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+            border-left: 1px solid rgba(0, 0, 0, 0.8);
+            border-right: 1px solid rgba(0, 0, 0, 0.8);  
+        }
+    }
+    .middle{
+        // width: 100%;
+        display: flex;
+        align-items: center;
+        &__size{
+            width: 90%;
+            height: 1px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.562);
+        }
+        img{
+            cursor: pointer;
+            background-color: $charte;
+            padding: 1.5vh;
+            margin: 0.3vh 0;
+            border-radius: 45px;
+            transition: all 0.2s ease-in-out;
+            transition: rotate 0.5s ease-in-out 0.2s;
+
+            &:hover{
+                padding: 1.8vh;
+                margin: 0;
+                rotate: 360deg;
+            }
+        }
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 70px;
+        font-weight: bold;
+        &__line{
+            width: 100%;
+        }
+        span{
+            letter-spacing: 3px;
+            padding: 20px;
+            color: $charte;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        width: 75%;
+        .info{
+            font-size: 40px;
+            font-weight: bold;
+            // padding: 15px;
+            span{
+                padding: 10px;
+            }
+        }
+    }
+}
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  .error{
+    border-color: red !important;
+  }

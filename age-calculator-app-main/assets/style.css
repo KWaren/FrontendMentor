@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 86%);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 50%;
+  background-color: white;
+  border-radius: 10px 10px 130px 10px;
+  padding: 35px;
+}
+.card .form {
+  display: flex;
+}
+.card .form__control {
+  width: 20%;
+  margin: 2vh;
+  color: hsl(0, 1%, 44%);
+}
+.card .form label {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.card .form__input {
+  width: 100%;
+  padding: 15px 0px 15px 8px;
+  font-size: 20px;
+  border-radius: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.507);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  border-left: 1px solid rgba(0, 0, 0, 0.8);
+  border-right: 1px solid rgba(0, 0, 0, 0.8);
+}
+.card .middle {
+  display: flex;
+  align-items: center;
+}
+.card .middle__size {
+  width: 90%;
+  height: 1px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.562);
+}
+.card .middle img {
+  cursor: pointer;
+  background-color: hsl(259, 100%, 65%);
+  padding: 1.5vh;
+  margin: 0.3vh 0;
+  border-radius: 45px;
+  transition: all 0.2s ease-in-out;
+  transition: rotate 0.5s ease-in-out 0.2s;
+}
+.card .middle img:hover {
+  padding: 1.8vh;
+  margin: 0;
+  rotate: 360deg;
+}
+.card .info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 70px;
+  font-weight: bold;
+}
+.card .info__line {
+  width: 100%;
+}
+.card .info span {
+  letter-spacing: 3px;
+  padding: 20px;
+  color: hsl(259, 100%, 65%);
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 75%;
+  }
+  .card .info {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .card .info span {
+    padding: 10px;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.error {
+  border-color: red !important;
+}
+
+/*# sourceMappingURL=style.css.map */

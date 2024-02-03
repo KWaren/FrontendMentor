@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <div class="card">
+    <div class="form">
+      <div class="form__control">
+        <label for="">Day</label>
+        <input type="number" name="day" id="day" class="form__input" placeholder="DD" onchange="jour()">
+        <div style="color: red;font-size: 14px;" id="dayError"></div>
+      </div>
+      <div class="form__control">
+        <label for="">Month</label>
+        <input type="number" name="month" id="months" placeholder="MM" class="form__input" onchange="mois()">
+        <div style="color: red; font-size: 14px;" id="monthsError"></div>
+      </div>
+      <div class="form__control">
+        <label for="">Year</label>
+        <input type="number" name="years" id="years" placeholder="YYYY" class="form__input" onchange="annee()">
+        <div style="color: red;font-size: 14px;" id="yearsError"></div>
+
+      </div>
+    </div>
+    <div class="middle">
+      <div class="middle__size"></div>
+      <img src="assets/images/icon-arrow.svg" alt="" onclick="cacul()">
+    </div>
+    <div class="info">
+      <div class="info__line"><span>--</span>years</div>
+      <div class="info__line"><span>--</span>months</div>
+      <div class="info__line"><span>--</span>days</div>
+
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">WK</a>.
+  </div>
+  <script>
+    // Créer une instance de l'objet Date
+    let date = new Date();
+    // Récupérer l'année actuelle
+    let anneeActuelle = date.getFullYear();
+    console.log(anneeActuelle);
+    let nJours = 31;
+    let day = document.getElementById("day");
+    let months = document.getElementById("months");
+    let years = document.getElementById("years");
+    let monthsError = document.getElementById("monthsError");
+    let dayError = document.getElementById("dayError");
+    let yearsError = document.getElementById("yearsError");
+    let v_day=0;
+    let v_months=0;
+    let v_years=0;
+    function jour() {
+      if (day.value.trim() == "") {
+        dayError.textContent = "This field is requiered";
+        day.classList.add("error");
+        v_day=0;
+
+      } else if (day.value <= nJours) {
+        dayError.textContent = " ";
+        day.classList.remove("error");
+        v_day=1;
+      } else {
+        day.classList.add("error");
+        dayError.textContent = "Must be a valid day";
+        v_day=0;
+      }
+    }
+    function mois() {
+      if (months.value.trim() == "") {
+        monthsError.textContent = "This field is requiered";
+        months.classList.add("error");
+        v_months=0;
+
+      } else if (months.value <= 12 && months.value > 0) {
+        if (months.value == 1 || months.value == 3 || months.value == 5 || months.value == 7 || months.value == 8 || months.value == 10 || months.value == 12) {
+          nJours = 31;
+        } else if (months.value == 4 || months.value == 6 || months.value == 9 || months.value == 11) {
+          nJours = 30;
+        }
+        else if (months.value == 2) {
+          nJours = 29;
+        }
+        jour();
+        monthsError.textContent = "";
+        months.classList.remove("error");
+        v_months=1;
+      }
+      else {
+        months.classList.add("error");
+        monthsError.textContent = "Must be a valid months";
+        v_months=0;
+      }
+    }
+    function annee() {
+      if (years.value.trim() == "") {
+        yearsError.textContent = "This field is requiered";
+        years.classList.add("error");
+        v_years=0;
+      } else if (years.value<anneeActuelle && years.value>1930) {
+        yearsError.textContent="";
+        years.classList.remove("error");
+        v_years=1;
+      }else{
+        yearsError.textContent = "Must be a valid year";
+        years.classList.add("error");
+        v_years=0;
+      }
+    }
+    function cacul() {
+      years();
+      if (v_years==1 && v_day==1 && v_months==1) {
+        // Calcul
+      }
+    }
+  </script>
+</body>
+
+</html>
